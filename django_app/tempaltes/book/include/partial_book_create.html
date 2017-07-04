@@ -1,0 +1,18 @@
+{% load widget_tweaks %}
+
+<form action="{% url 'book:book_create' %}" method="post" class="js-book-create-form">
+    {% csrf_token %}
+    <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Create a new book</h4>
+    </div>
+    <div class="modal-body">
+        {% include 'book/include/partial_book_form.html' %}
+    </div>
+    <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+        <button type="submit" class="btn btn-primary">Create book</button>
+    </div>
+</form>
