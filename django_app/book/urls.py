@@ -7,4 +7,5 @@ urlpatterns = [
     url(r'list/$', views.book_list, name='book_list' ),
     url(r'^create/$', views.book_create, name='book_create'),
     url(r'^(?P<pk>\d+)/update/$', views.book_update, name='book_update'),
+    url(r'^(?P<pk>\d+)/delete/$', views.book_delete, name='book_delete'),
 ]
